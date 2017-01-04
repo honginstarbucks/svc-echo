@@ -93,7 +93,7 @@ lazy val root = Project(id = "svc-echo", base = file("."))
   .settings(libraryDependencies ++= akkaStreamDependencies)
   .settings(libraryDependencies ++= macWireDependencies)
   .settings(libraryDependencies ++= httpDependencies)
-  .enablePlugins(DockerPlugin)
+  .enablePlugins(JavaAppPackaging)
   .settings(
     dockerExposedPorts := Seq(8080)
   )

@@ -18,8 +18,8 @@ object app extends App {
   val module = new Module {}
 
   val httpService = module.httpService
-  val bindingFuture = Http().bindAndHandle(httpService.routes, "127.0.0.1", 8080)
-  println(s"server is starting at 127.0.0.1:8080\n")
-  StdIn.readLine()
-  actorSystem.terminate()
+  val bindingFuture = Http().bindAndHandle(httpService.routes, "0.0.0.0", 8080)
+  println(s"server is starting at 0.0.0.0:8080\n")
+  //StdIn.readLine()
+  //actorSystem.terminate()
 }
